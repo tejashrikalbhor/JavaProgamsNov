@@ -16,6 +16,7 @@ public class AccessSpecifier_Package {
     public static void main(String[] args) {
         C cc = new C();
         cc.showDetails();
+        System.out.println("------------------");
         System.out.println(cc.a);
         System.out.println(cc.b);
 //        System.out.println(cc.c);
