@@ -2,10 +2,11 @@ package com.classesandobjects;
 
 
 abstract class Parent{
+
     void getdata(){
         System.out.println("you are in the getData() for parent class..");
     }
-    abstract void showData();
+
 }
 class Child extends Parent{
     void get(){

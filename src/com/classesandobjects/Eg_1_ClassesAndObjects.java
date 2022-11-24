@@ -3,7 +3,7 @@ package com.classesandobjects;
 
 public class Eg_1_ClassesAndObjects {
     int x=10,y=20;
-    void show(){
+    public void show(){
         System.out.println("Addition of 2 nos:"+(x+y));
     }
     public static void main(String[] args) {
@@ -13,3 +13,4 @@ public class Eg_1_ClassesAndObjects {
     }
 
 }
+
