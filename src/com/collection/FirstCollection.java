@@ -12,6 +12,15 @@ public class FirstCollection {
         names.add("sohaa");
         System.out.println("this is my array list..");
         System.out.println(names);
+        // set ()
+        names.set(3,"sonakshii");
+        System.out.println("using set()");
+        System.out.println(names);
+        //add() at particular position
+        names.add(1,"sonuu");
+        System.out.println("using add()");
+        System.out.println(names);
+
 
     }
 }
