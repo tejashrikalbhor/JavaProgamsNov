@@ -2,6 +2,7 @@ package com.collection;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.Vector;
 
 public class FirstCollection {
     public static void main(String[] args) {
@@ -30,6 +31,16 @@ public class FirstCollection {
         list.add(1234567891);
         list.add(15045.76);
         System.out.println(list);
+
+        // vector
+        Vector<String> v = new Vector();
+        System.out.println("this is the vector..");
+        v.add("vector");
+        v.add("linked list");
+        v.add("array list");
+        System.out.println(v);
+
+
 
 
 
