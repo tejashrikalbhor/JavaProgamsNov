@@ -1,6 +1,7 @@
 package com.collection;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class FirstCollection {
     public static void main(String[] args) {
@@ -20,6 +21,18 @@ public class FirstCollection {
         names.add(1,"sonuu");
         System.out.println("using add()");
         System.out.println(names);
+
+        // link list
+        LinkedList list = new LinkedList();
+        System.out.println("this is the linked list..");
+        list.add("pooja");
+        list.add(34);
+        list.add(1234567891);
+        list.add(15045.76);
+        System.out.println(list);
+
+
+
 
 
     }
