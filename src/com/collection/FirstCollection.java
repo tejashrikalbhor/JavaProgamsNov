@@ -1,8 +1,6 @@
 package com.collection;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Vector;
+import java.util.*;
 
 public class FirstCollection {
     public static void main(String[] args) {
@@ -39,6 +37,22 @@ public class FirstCollection {
         v.add("linked list");
         v.add("array list");
         System.out.println(v);
+
+        //hashset
+        HashSet<Double> hs=new HashSet<Double>();
+        System.out.println("this is hash set..");
+        hs.add(12.12);
+        hs.add(24.7);
+        hs.add(111.111);
+        hs.add(5.5);
+        System.out.println(hs);
+
+        //tree set
+        TreeSet <Double> ts = new TreeSet<>();
+        System.out.println("this is tree set..");
+        ts.addAll(hs);
+        System.out.println(ts);
+
 
 
 
