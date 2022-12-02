@@ -28,6 +28,10 @@ public class Eg_1_ArrayList {
         price.add(60);
         System.out.println("size of array list is :"+price.size());
         System.out.println(price);
+        // 3.ArrayList(Collection c)
+        System.out.println("3.ArrayList(Collection c)");
+        List <String> collection = new ArrayList<>(name);
+        System.out.println(collection);
 
 
 
