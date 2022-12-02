@@ -3,7 +3,7 @@ package com.arraylistexamples;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Eg_1_ArrayList {
+public class Eg2_ArrayList_Constructors {
     public static void main(String[] args) {
         // there are 3 constructors used for ArrayList
         // 1.ArrayList();
