@@ -1,6 +1,8 @@
 package com.oopsconceptinjava;
 
-public class EG_StaticVariable {
+import com.classesandobjects.MYFirstException;
+
+public class EG_StaticVariable extends  MYFirstException {
     int rollno;
     static  String name;
     void getDetails(){
@@ -13,6 +15,12 @@ public class EG_StaticVariable {
         v.rollno=2;
         v.name ="tejashri";
         v.getDetails();
+
+        MYFirstException myFirstException= new MYFirstException();
+
+        int a=10;
+        int b[]= new int[10];
+
 
     }
 }

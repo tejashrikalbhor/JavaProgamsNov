@@ -1,6 +1,12 @@
 package com.classesandobjects;
 
 public class MYFirstException {
+
+
+  protected void m1()
+    {
+        System.out.println("hii");
+    }
     public static void main(String[] args) {
         //eg:1 Exception NullPointerException
 //        String name =null;

@@ -1,9 +1,13 @@
 package com.oopsconceptinjava;
 
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverAction;
+import java.sql.DriverManager;
 
 public class CheckedException_Eg {
-    static void exceptionMethod(String s)throws IOException{
+    static void exceptionMethod(String s)throws IOException,Exception{
         if(s == null){
             throw new IOException("this is ioException occured..");
         }
@@ -11,18 +15,19 @@ public class CheckedException_Eg {
             System.out.println(s);
         }
 
+
+
     }
     public static void main(String[] args) {
-        try {
-            String s1=null;
-            System.out.println("you are in the try block..");
-            exceptionMethod(s1);
-        } catch (Exception e) {
-            System.out.println("you are in the catch block..");
-            e.printStackTrace();
-            System.out.println(e.getMessage());
-            System.out.println("end of catch block..");
-        }
-        System.out.println("end of the code..");
+
+        String s1=null;
+
+        s1.length();
+
+
+
+
+
     }
 }
+

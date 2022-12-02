@@ -6,10 +6,7 @@ class C{
     private int c=30;
     protected int d=40;
     void showDetails(){
-        System.out.println(a);
-        System.out.println(b);
-        System.out.println(c);
-        System.out.println(d);
+
     }
 }
 public class AccessSpecifier_Package {
@@ -25,3 +22,6 @@ public class AccessSpecifier_Package {
     }
 
 }
+
+
+

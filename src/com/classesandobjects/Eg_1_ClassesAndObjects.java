@@ -1,4 +1,5 @@
 package com.classesandobjects;
+import com.oopsconceptinjava.AccessSpecifier;
 
 
 public class Eg_1_ClassesAndObjects {
