@@ -33,6 +33,14 @@ public class Eg3_ArrayList_RemoveMethod {
 //        System.out.println(isRemoved);
         remove1.remove(1);
         System.out.println(remove1);
+        remove1.add("civics");
+        remove1.add("geography");
+        System.out.println("--------------------------------");
+        System.out.println(remove1);
+        remove1.remove("geography");
+        System.out.println("after applying remove method");
+        System.out.println(remove1);
+
 
 
 
