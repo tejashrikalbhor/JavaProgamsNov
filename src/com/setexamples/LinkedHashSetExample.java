@@ -31,6 +31,9 @@ public class LinkedHashSetExample {
         ss.add("pune");
         ss.add("maharashtra");
         ss.add("austrax");
+        ss.add("technology");
+        ss.add("pune");
+        ss.add("401221");
         System.out.println("you are in the linked hash set of strings..");
         System.out.println(ss);
     }
