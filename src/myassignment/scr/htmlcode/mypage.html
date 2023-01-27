@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function pass(){
+        var name =document.getElementById("uname").value;
+        var status =document.getElementById("ustatus").value;
+
+         document.writeln(name);
+         document.writeln(status);
+
+<!--        localStorage.setItem("textvalue",name);-->
+<!--         var status =document.getElementById("ustatus").value;-->
+<!--        localStorage.setItem("textvalue",status);-->
+<!--        return false;-->
+
+
+        }
+    </script>
+
+
+
+</head>
+<body>
+<form onsubmit="pass()">
+    <br>
+    Name:<input type="text" id="uname"><br><br>
+    Status:<input type="text" id="ustatus"><br><br>
+    <button type="submit" />Add</button>
+    <button type="reset" >Reset</button>
+</form>
+</body>
+</html>

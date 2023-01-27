@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+ function removeRow(r)
+ {
+ var fooId = "foo";
+ var id = r.id.substring(3,r.id.length-1);
+ for(i=1;i<=3;i++)
+ {
+ document.getElementById(fooId+id+i).remove();
+ }
+ document.getElementById(fooId+id+5).nextSibling.remove();
+ document.getElementById(fooId+id+5).remove();
+ }
+ var x = 1;
+ function add() {
+ var fooId = "foo";
+ for (i=1; i<=3; i++)
+ {
+ //Create an input type dynamically.
+ var element = document.createElement("input");
+ //Assign different attributes to the element.
+ element.setAttribute("type", fooId+x+i);
+ element.setAttribute("name", fooId+x+i);
+ element.setAttribute("id", fooId+x+i);
+ if(i==1){
+ element.setAttribute("value", "First name");
+ }
+ if(i==2){
+ element.setAttribute("value", "Last name");
+ }
+ if(i==3){
+ element.setAttribute("value", "age");
+ }
+ var foo = document.getElementById("fooBar");
+ foo.appendChild(element);
+ foo.innerHTML += ' ';
+ }
+ i++;
+ var element = document.createElement("input");
+ element.setAttribute("type", "button");
+ element.setAttribute("value", "Remove");
+ element.setAttribute("id", fooId+x+i);
+ element.setAttribute("name", fooId+x+i);
+ element.setAttribute("onclick", "removeRow(this)");
+ foo.appendChild(element);
+ var br = document.createElement("br");
+ foo.appendChild(br);
+ x++;
+ }
+</script>
+
+</head>
+<body>
+
+<form id="form" name="form" action="test.php" method="post" enctype="multipart/form-data">
+  <input type="text" id="foo01" name="foo01" value="first name">
+  <input type="text" id="foo02" name="foo02" value="last name"/>
+  <input type="text" id="foo03" name="foo03" value="age">
+  <br>
+  <span id="fooBar">
+ </span>
+  <INPUT type="button" value="Add more data" onclick="add()"/>
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

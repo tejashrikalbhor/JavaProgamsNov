@@ -62,12 +62,19 @@ public class IteratorArrayListEg {
         Iterator<String> s = copy.iterator();
         System.out.println("you are in the iterator of array list constructor..");
         System.out.println("---------------------------------------------------------");
-
         while (s.hasNext()){
            String res = s.next();
+           if(res.equals("delhi"))
+           {
+               s.remove();
+               System.out.println("delhi removed");
+               break;
+           }
             System.out.println(res);
 //            s.remove();
             }
+        System.out.println(copy);
+
         if(copy.contains("delhi")){
             s.remove();
             System.out.println(copy);

@@ -1,12 +1,13 @@
 package com.setexamples;
 
+import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
 public class LinkedHashSetExample {
     public static void main(String[] args) {
         System.out.println("you are in the main..");
-        Set<Integer>i=new LinkedHashSet<>();
+        Set<Integer>i=new HashSet<>();
         i.add(10);
         i.add(1);
         i.add(20);

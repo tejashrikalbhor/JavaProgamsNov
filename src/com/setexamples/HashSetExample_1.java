@@ -13,6 +13,7 @@ public class HashSetExample_1 {
         s.add(4);
         s.add(5);
         s.add(10);
+        s.add(10);
         s.add(20);
         s.add(30);
         s.add(40);
@@ -26,7 +27,7 @@ public class HashSetExample_1 {
         ss.add("tejashri");
         ss.add("kalbhor");
         ss.add("Silicon stack");
-        ss.add("pune");
+        ss.add(null);
         System.out.println("you are in the set of strings.. ");
         System.out.println(ss);
 

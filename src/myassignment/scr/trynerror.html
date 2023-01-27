@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add  Record</title>
+    <script type="text/JavaScript">
+
+        function showMessage(){
+            var name = document.getElementById("name").value;
+            display_message.innerHTML= name;
+
+            var status = document.getElementById("status").value;
+            display_status.innerHTML= status;
+
+            const d = new Date();
+<!--            document.getElementById("demo").innerHTML = format(MMM D, YYYY hh mm ss A)-->
+            document.getElementById("demo").innerHTML = d;
+        }
+
+
+    </script>
+</head>
+<body>
+<form>
+    Name: <input type="text" id = "name"><br><br>
+    Status: <input type="text" id = "status"><br><br>
+
+    <input type="button" onclick="showMessage()" value="Submit" />
+    <button type="reset" >Reset</button>
+
+</form>
+
+<span id = "display_message"></span><br>
+<span id = "demo"></span><br>
+<span id = "display_status"></span>
+
+
+
+</body>

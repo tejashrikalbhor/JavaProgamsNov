@@ -1,0 +1,89 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add  Record</title>
+
+  <script type="text/JavaScript">
+
+let x = new Array();
+        function handleSubmit(){
+        debugger
+
+            var name = document.getElementById("name").value;
+            var status = document.getElementById("status").value;
+
+            if(name ==""||status==""){
+		alert("Please enter the name and status.");
+	}
+	else{
+	if(status =="pass"||status =="Pass"||status =="PASS"||status =="fail"||status =="Fail"||status =="FAIL")
+		{
+
+<!--		    var date =new Date().toString();-->
+<!--            var current_date = date.slice(4,25);-->
+                var current_date = current_Date();
+
+<!--            document.getElementById("demo").innerHTML = format(MMM D, YYYY hh mm ss A)-->
+<!--            document.getElementById("demo").innerHTML = d;-->
+
+            x.push({
+            name:name,
+            status:status,
+            current_date:current_date
+            })
+var result= new Array();
+result=x;
+window.sessionStorage.setItem("items", JSON.stringify(result));
+alert("Record added successfully.");
+document.getElementById("myForm").reset();
+        }
+        else{
+		alert("Please enter the correct status as Pass or Fail.");
+		document.getElementById("status").value="";
+	}
+        }
+
+}
+function clearData(){
+debugger
+sessionStorage.clear();
+alert("Record Removed Successfully.");
+refreshPage();
+}
+function refreshPage(){
+    window.location.reload();
+    alert("Refresh..");
+}
+function current_Date(){
+var options = {  year: 'numeric', month: 'short', day: 'numeric' };
+var today  = new Date();
+
+var curr_date = today.toLocaleString("en-US",options);
+var curr_time=today.toLocaleString("en-US");
+let curr_time_am_pm=curr_time.slice(10);
+
+var current_date_time =curr_date+curr_time_am_pm;
+
+return current_date_time;
+}
+
+
+    </script>
+</head>
+<body>
+<h2>Add Record</h2>
+<form id="myForm" name="myForm">
+  Name: <input type="text"  id = "name"><br><br>
+  Status: <input type="text" id = "status"><br><br>
+
+  <input type="button" onclick="handleSubmit()" value="Submit" />
+  <input type="button" id="show" onclick="showData()" value="Show data" />
+  <input type="button" id="clear" onclick="clearData()" value="Remove All" />
+  <button type="reset" >Reset</button>
+
+</form>
+</body>
+
+</html>

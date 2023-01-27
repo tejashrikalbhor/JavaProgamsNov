@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add  Record</title>
+  <script type="text/JavaScript">
+<!--var resultList=[];-->
+let x = new Array();
+const countPass=0;
+const countFail=0;
+        function showMessage(){
+            var name = document.getElementById("name").value;
+
+            var status = document.getElementById("status").value;
+            const d = new Date();
+<!--            document.getElementById("demo").innerHTML = format(MMM D, YYYY hh mm ss A)-->
+<!--            document.getElementById("demo").innerHTML = d;-->
+debugger
+            x.push({
+            name:name,
+            status:status,
+            date:d
+            })
+
+
+
+<!--alert("Record Added Successfully !");-->
+<!--document.form.reset();-->
+document.getElementById("myForm").reset();
+
+        }
+
+ function showData(){
+ var r=new Array();
+ r=x;
+ debugger
+   if(x.length>0){
+            for(let i=0;i<x.length;i++){
+             document.getElementById( 'table' ).innerHTML +=
+<!--         '<tr ><td>' + x[i].name + '</td><td>' + x[i].status + '</td><td>' + x[i].date + '</td></tr>';-->
+ '<tr ><td>' + x[i].name + '</td><td>'    + x[i].date +  '</td><td>'  + x[i].status + '</td></tr>';
+
+
+            }
+
+            }
+<!--            r=[];-->
+
+ }
+<!-- function countStatus(){-->
+<!-- if(x.length>0)-->
+<!-- {-->
+<!--  for(let i=0;i<x.length;i++){-->
+<!-- if(x[i].status== "Pass" || x[i].status == "pass" || x[i].status== "PASS"){-->
+<!--            countPass=countPass+1;-->
+<!--            console.log(countPass);-->
+<!--            document.getElementById( 'cnt' ).innerHTML += '<p>'+ countPass '</p> ;-->
+<!--            }-->
+<!--            else if(x[i].status== "Fail" || x[i].status == "fail" || x[i].status== "FAIL"){-->
+<!--            countFail=countFail+1;-->
+<!--             console.log(countFail);-->
+<!--              document.getElementById( 'cnt' ).innerHTML += +  '<p>'+ countFail '</p> ;-->
+<!--            }-->
+<!--            }-->
+<!--            }-->
+<!--&lt;!&ndash;   document.getElementById( 'cnt' ).innerHTML += '<h4>'+ countPass '</h4> +  '<h4>'+ countFail '</h4>&ndash;&gt;-->
+<!-- }-->
+
+
+
+    </script>
+</head>
+<body>
+
+<form id="myForm" autocomplete="off" >
+  Name: <input type="text"  id = "name"><br><br>
+  Status: <input type="text" id = "status"><br><br>
+  <input type="button" onclick="showMessage()" value="Submit" />
+  <button type="reset" >Clear</button>
+  <input type="button" id="clean" onclick="showData()" value="Show data" />
+
+<!--  <input type="button" id="cnt" onclick="countStatus()" value="Show Count" />-->
+
+
+
+</form>
+
+<span id = "display_message"></span><br>
+<span id = "demo"></span><br>
+ <span id = "display_status"></span>
+
+<table id="table">
+
+</table>
+
+
+
+</body>

@@ -8,9 +8,16 @@ public class Eg1_ArrayList_Constructors {
         // there are 3 constructors used for ArrayList
         // 1.ArrayList();
         List<String> name =new ArrayList<>();
+        List<Test> t= new ArrayList<>();
+        Test t1= new Test();
+
+        t.add(new Test(1,"ABC"));
         name.add("tejashri");
         name.add("kalbhor");
         name.add("Employee");
+        name.add(null);
+        name.add(null);
+
         name.add("Silicon stack");
         System.out.println("you are in the main method");
         System.out.println("Array constructor");
@@ -25,6 +32,7 @@ public class Eg1_ArrayList_Constructors {
         price.add(30);
         price.add(40);
         price.add(50);
+        price.add(60);
         price.add(60);
         System.out.println("size of array list is :"+price.size());
         System.out.println(price);
