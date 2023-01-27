@@ -32,4 +32,5 @@ var display_date=current_Date();
 document.getElementById("blue darken_display_date").innerHTML=display_date;
 document.getElementById("iteration1_date").innerHTML=display_date;
 document.getElementById("start-time").innerHTML=display_date;
+document.getElementById("end-time").innerHTML=display_date;
 }
