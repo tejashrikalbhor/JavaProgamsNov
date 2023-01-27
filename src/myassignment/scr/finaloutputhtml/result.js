@@ -3,11 +3,11 @@ debugger
 
 
 var storedArray = JSON.parse(sessionStorage.getItem("items"));
-var arrPass=new Array();
-var arrFail=new Array();
-countStatus();
-document.getElementById("countPass").innerHTML=arrPass;
-document.getElementById("countFail").innerHTML=arrFail;
+//var arrPass=new Array();
+//var arrFail=new Array();
+//countStatus();
+//document.getElementById("countPass").innerHTML=arrPass;
+//document.getElementById("countFail").innerHTML=arrFail;
 
 var totalCount=storedArray==null?0:storedArray.length;
 document.getElementById("steps").innerHTML=totalCount;
