@@ -124,11 +124,13 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='83.333%'><span class='strong'>5</span> step(s) passed</span>
+<!--                    <span class='tooltipped' data-position='top' data-tooltip='83.333%'><span class='strong'>5</span> step(s) passed</span>-->
+					<span class='tooltipped' data-position='top' data-tooltip='83.333%'><span class='strong' id="countPass">${arrPass}</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='16.667%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
-                </div>
+<!--                    <span class='strong tooltipped' data-position='top' data-tooltip='16.667%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others-->
+					<span class='strong tooltipped' data-position='top' data-tooltip='16.667%' id="countFail">${arrFail}</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
             </div>
         </div>
     </div>
@@ -203,19 +205,22 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>6</div>
+<!--					<div class='panel-lead'>6</div>-->
+					<div class='panel-lead' id="steps">${totalCount}</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Dec 30, 2022 06:47:28 AM</div>
+<!--					<div class='panel-lead'>Dec 30, 2022 06:47:28 AM</div>-->
+					<div class='panel-lead' id="panel-lead-start-time">${display_date}</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Dec 30, 2022 07:04:16 AM</div>
+<!--			 		<div class='panel-lead'>Dec 30, 2022 07:04:16 AM</div>-->
+					<div class='panel-lead' id="panel-lead-end-time">${display_date}</div>
 				</div>
 			</div>
 			<div class='col s2'>

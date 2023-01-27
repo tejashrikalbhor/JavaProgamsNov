@@ -1,3 +1,12 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-let date2 = moment().format('MMM D, YYYY hh mm ss A)');
-console.log(date2);
+function countStatus(status){
+if(status =="pass"||status =="Pass"||status =="PASS"){
+countPass=countPass+1;
+arrPass.push(countPass);
+}
+else{
+if(status =="fail"||status =="Fail"||status =="FAIL"){
+countFail=countFail +1;
+arrFail.push(countFail);
+}
+}
+}
