@@ -10,16 +10,25 @@ var countPass =duplicateArray==null?0:duplicateArray.filter(function(element){re
 var countFail =duplicateArray==null?0:duplicateArray.filter(function(element){return (element.status == 'fail')||(element.status == 'Fail')||(element.status == 'FAIL');}).length
 
 
+
 document.getElementById("countPass").innerHTML=countPass;
 document.getElementById("countFail").innerHTML=countFail;
+
+//
+//document.getElementById("cp").innerHTML=countPass1;
+//document.getElementById("cf").innerHTML=countFail1;
 
 var totalCount=storedArray==null?0:storedArray.length;
 document.getElementById("steps").innerHTML=totalCount;
 
+//
+//var totalCount1=storedArray==null?0:storedArray.length;
+//document.getElementById("ts").innerHTML=totalCount1;
 
 
 
-display_current_date_hopePage();
+
+display_current_date_homePage();
 
 for (let i = 0; i < storedArray.length; i++) {
 	var name = storedArray[i].name;
@@ -54,7 +63,7 @@ var current_date_time =curr_date+curr_time_am_pm;
 return current_date_time;
 }
 
-function display_current_date_hopePage(){
+function display_current_date_homePage(){
 
 var display_date=current_Date();
 document.getElementById("blue darken_display_date").innerHTML=display_date;

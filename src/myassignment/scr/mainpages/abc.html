@@ -1,0 +1,21 @@
+<html>
+<head>
+  <script type="text/javascript">
+      window.onload = setupRefresh;
+
+      function setupRefresh() {
+          setInterval("refreshFrame();", 1000);
+      }
+      function refreshFrame() {
+         parent.center.location.reload();
+      }
+  </script>
+</head>
+<frameset cols="25%,75%,">
+<!--  <frame name="left_frame" src="" scrolling="auto" frameborder="1" />-->
+<!--  <frame  name="right_frame" scrolling="auto" src="" />-->
+  <frame name="left" src="file:///C:/projectWork/JavaProgamsNov/src/myassignment/scr/finaloutputhtml/index.html"/>
+  <frame name="center" src="file:///C:/projectWork/JavaProgamsNov/src/myassignment/scr/finaloutputhtml/homepage.html"/>
+
+</frameset>
+</html>

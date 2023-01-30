@@ -24,18 +24,11 @@ let x = new Array();
 	else{
 	if(status =="pass"||status =="Pass"||status =="PASS"||status =="fail"||status =="Fail"||status =="FAIL")
 		{
-
-<!--		    var date =new Date().toString();-->
-<!--            var current_date = date.slice(4,25);-->
                 var current_date = current_Date();
-
-<!--            document.getElementById("demo").innerHTML = format(MMM D, YYYY hh mm ss A)-->
-<!--            document.getElementById("demo").innerHTML = d;-->
-
-            x.push({
-            name:name,
-            status:status,
-            current_date:current_date
+                  x.push({
+                 name:name,
+                 status:status,
+                 current_date:current_date
             })
 var result= new Array();
 result=x;
@@ -52,9 +45,16 @@ document.getElementById("myForm").reset();
 }
 function clearData(){
 debugger
-sessionStorage.clear();
+var storedRecord =JSON.parse(sessionStorage.getItem("items"));
+if(storedRecord ==null){
+alert("Empty Record !");
+}
+else{
+sessionStorage.removeItem("items");
+<!--sessionStorage.clear();-->
 alert("Record Removed Successfully.");
 refreshPage();
+}
 }
 function refreshPage(){
     window.location.reload();

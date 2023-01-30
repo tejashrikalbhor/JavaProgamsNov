@@ -284,6 +284,18 @@
 <!-- testrunner-logs view -->		</div>
 		<!-- container -->
 		<script>
+
+<!--var ts=`<p id="ts">${totalCount1}</p>`;-->
+<!--var cp=`<p id="cp">${countPass1}</p>`;-->
+<!--var cf=`<p id="cf">${countFail1}</p>`;-->
+
+<!--var statusCount= new Array();-->
+<!--statusCount.push({-->
+<!--ts: ts,-->
+<!--cp: cp,-->
+<!--cf: cf,-->
+<!--});-->
+
 			var statusGroup = {
                 parentCount: 1,
 				passParent: 0,
@@ -294,6 +306,7 @@
 				skipParent: 0,
 				exceptionsParent: 1,
 				childCount: 6,
+<!--				childCount: statusCount.ts,-->
 				passChild: 5,
 				failChild: 1,
 				fatalChild: 0,

@@ -10,3 +10,13 @@ arrFail.push(countFail);
 }
 }
 }
+var ts=`<p id="ts">${totalCount}</p>`;
+var cp=`<p id="cp">${countPass}</p>`;
+var cf=`<p id="cf">${countFail}</p>`;
+
+var statusCount= new Array();
+statusCount.push({
+childCount: ts,
+passChild: cp,
+failChild: cf,
+});
