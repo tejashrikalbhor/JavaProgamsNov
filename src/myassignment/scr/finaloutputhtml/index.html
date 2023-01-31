@@ -43,11 +43,12 @@ document.getElementById("myForm").reset();
         }
 
 }
+
 function clearData(){
 debugger
 var storedRecord =JSON.parse(sessionStorage.getItem("items"));
 if(storedRecord ==null){
-alert("Empty Record !");
+alert("The Record is Empty !");
 }
 else{
 sessionStorage.removeItem("items");
@@ -56,9 +57,11 @@ alert("Record Removed Successfully.");
 refreshPage();
 }
 }
+
 function refreshPage(){
-    window.location.reload();
+    window.location.reload(true);
 }
+
 function current_Date(){
 var options = {  year: 'numeric', month: 'short', day: 'numeric' };
 var today  = new Date();
@@ -82,7 +85,7 @@ return current_date_time;
   Status: <input type="text" id = "status"><br><br>
 
   <input type="button" onclick="handleSubmit()" value="Submit" />
-  <input type="button" id="show" onclick="showData()" value="Show data" />
+<!--  <input type="button" id="show" onclick="showData()" value="Show data" />-->
   <input type="button" id="clear" onclick="clearData()" value="Remove All" />
   <button type="reset" >Reset</button>
 

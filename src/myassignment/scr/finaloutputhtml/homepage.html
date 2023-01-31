@@ -285,15 +285,38 @@
 		<!-- container -->
 		<script>
 
+debugger
+
+var storedArray = JSON.parse(sessionStorage.getItem("items"));
+var duplicateArray = storedArray;
+
+var countPass =duplicateArray==null?0:duplicateArray.filter(function(element){return (element.status == 'pass')||(element.status == 'Pass')||(element.status == 'PASS');}).length
+var countFail =duplicateArray==null?0:duplicateArray.filter(function(element){return (element.status == 'fail')||(element.status == 'Fail')||(element.status == 'FAIL');}).length
+var totalCount=storedArray==null?0:storedArray.length;
+
+
+
+
+
+
 <!--var ts=`<p id="ts">${totalCount1}</p>`;-->
-<!--var cp=`<p id="cp">${countPass1}</p>`;-->
-<!--var cf=`<p id="cf">${countFail1}</p>`;-->
+<!--var cp=`<p id="cp">${countPass}</p>`;-->
+<!--var cf=`<p id="cf">${countFail}</p>`;-->
+
+
+<!--var totalCount=(document.getElementById("steps").value);-->
+<!--var countPass=(document.getElementById("countPass").value);-->
+<!--var countFail=(document.getElementById("countFail").value);-->
+
+<!--var ts=`${totalCount}`;-->
+<!--var cp=`${countPass}`;-->
+<!--var cf=`${countFail}`;-->
 
 <!--var statusCount= new Array();-->
 <!--statusCount.push({-->
-<!--ts: ts,-->
-<!--cp: cp,-->
-<!--cf: cf,-->
+<!--totalCount:totalCount,-->
+<!--countPass: countPass,-->
+<!--countFail: countFail,-->
 <!--});-->
 
 			var statusGroup = {
@@ -305,10 +328,12 @@
 				warningParent: 0,
 				skipParent: 0,
 				exceptionsParent: 1,
-				childCount: 6,
-<!--				childCount: statusCount.ts,-->
-				passChild: 5,
-				failChild: 1,
+<!--				childCount: 6,-->
+				childCount: totalCount,
+<!--				passChild: 5,-->
+				passChild:countPass,
+<!--				failChild: 1,-->
+				failChild:countFail ,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
@@ -327,6 +352,10 @@
 				debugGrandChild: 0,
 				exceptionsGrandChild: 0,
 			};
+
+<!--<div id="statusGroup">${statusGroup}</div>-->
+
+
 		</script>
 		<script>
 			var timeline = {

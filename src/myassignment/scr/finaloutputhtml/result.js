@@ -1,4 +1,7 @@
+
 window.addEventListener('load', () => {
+
+
 debugger
 
 
@@ -14,21 +17,36 @@ var countFail =duplicateArray==null?0:duplicateArray.filter(function(element){re
 document.getElementById("countPass").innerHTML=countPass;
 document.getElementById("countFail").innerHTML=countFail;
 
-//
-//document.getElementById("cp").innerHTML=countPass1;
-//document.getElementById("cf").innerHTML=countFail1;
-
 var totalCount=storedArray==null?0:storedArray.length;
 document.getElementById("steps").innerHTML=totalCount;
 
-//
-//var totalCount1=storedArray==null?0:storedArray.length;
-//document.getElementById("ts").innerHTML=totalCount1;
-
-
-
-
 display_current_date_homePage();
+
+var statusCount=new Array();
+statusCount.push({
+    ts:totalCount,
+    cp:countPass,
+    cf:countFail
+
+});
+
+
+
+var statusGroup =new Array();
+ statusGroup.push({
+
+
+				childCount: statusCount.ts,
+
+				passChild:statusCount.cp,
+
+				failChild: statusCount.cf,
+
+			});
+
+//document.getElementById("statusGroup").innerHTML=statusGroup;
+
+
 
 for (let i = 0; i < storedArray.length; i++) {
 	var name = storedArray[i].name;
@@ -46,8 +64,8 @@ if((status == 'fail')||(status == 'Fail')||(status == 'FAIL'))
 
 }
 }
-
 }
+//refreshPage();
 })
 
 function current_Date(){
@@ -78,3 +96,7 @@ document.getElementById("panel-lead-end-time").innerHTML=display_date;
 }
 
 
+function refreshPage(){
+    window.location.reload();
+
+}
