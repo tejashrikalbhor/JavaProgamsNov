@@ -47,7 +47,8 @@ var statusGroup =new Array();
 //document.getElementById("statusGroup").innerHTML=statusGroup;
 
 
-
+if(storedArray==null)return 0;
+else{
 for (let i = 0; i < storedArray.length; i++) {
 	var name = storedArray[i].name;
 	var status = storedArray[i].status;
@@ -65,6 +66,7 @@ if((status == 'fail')||(status == 'Fail')||(status == 'FAIL'))
 }
 }
 }
+}
 //refreshPage();
 })
 
@@ -77,7 +79,7 @@ var curr_date = today.toLocaleString("en-US",options);
 var curr_time=today.toLocaleString("en-US");
 let curr_time_am_pm=curr_time.slice(10);
 
-var current_date_time =curr_date+curr_time_am_pm;
+var current_date_time =curr_date+" "+curr_time_am_pm;
 return current_date_time;
 }
 

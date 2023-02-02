@@ -9,8 +9,6 @@
 
 let x = new Array();
 
-
-
         function handleSubmit(){
         debugger
 
@@ -70,7 +68,7 @@ var curr_date = today.toLocaleString("en-US",options);
 var curr_time=today.toLocaleString("en-US");
 let curr_time_am_pm=curr_time.slice(10);
 
-var current_date_time =curr_date+curr_time_am_pm;
+var current_date_time =curr_date+" "+curr_time_am_pm;
 
 return current_date_time;
 }
@@ -86,7 +84,7 @@ return current_date_time;
 
   <input type="button" onclick="handleSubmit()" value="Submit" />
 <!--  <input type="button" id="show" onclick="showData()" value="Show data" />-->
-  <input type="button" id="clear" onclick="clearData()" value="Remove All" />
+  <input type="button" id="clear" onclick="clearData(),window.location.reload();" value="Remove All" />
   <button type="reset" >Reset</button>
 
 </form>
