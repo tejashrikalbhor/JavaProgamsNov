@@ -33,6 +33,7 @@ result=x;
 window.sessionStorage.setItem("items", JSON.stringify(result));
 alert("Record added successfully.");
 document.getElementById("myForm").reset();
+
         }
         else{
 		alert("Please enter the correct status as Pass or Fail.");
@@ -56,9 +57,9 @@ refreshPage();
 }
 }
 
-function refreshPage(){
-    window.location.reload(true);
-}
+<!--function refreshPage(){-->
+<!--    window.location.reload(true);-->
+<!--}-->
 
 function current_Date(){
 var options = {  year: 'numeric', month: 'short', day: 'numeric' };
@@ -82,12 +83,17 @@ return current_date_time;
   Name: <input type="text"  id = "name"><br><br>
   Status: <input type="text" id = "status"><br><br>
 
-  <input type="button" onclick="handleSubmit()" value="Submit" />
-<!--  <input type="button" id="show" onclick="showData()" value="Show data" />-->
-  <input type="button" id="clear" onclick="clearData(),window.location.reload();" value="Remove All" />
+<!--  <input type="button" onclick="handleSubmit();javascript:refreshPage();" value="Submit" />-->
+  <input type="button" onclick="handleSubmit();" value="Submit" />
+  <!--  <input type="button" id="show" onclick="showData()" value="Show data" />-->
+<!--  <a http-equiv=”refresh” content=”0; url=file:///C:/projectWork/JavaProgamsNov/src/myassignment/scr/finaloutputhtml/homepage.html”>-->
+<!--    <input type="button" id="clear" onclick="clearData(),window.location.reload();" value="Remove All" /></a>-->
+
+    <input type="button" id="clear" onclick="clearData(),window.location.reload();" value="Remove All" />
   <button type="reset" >Reset</button>
 
 </form>
+<script type="text/JavaScript" src="result.js"/>
 </body>
 
 </html>

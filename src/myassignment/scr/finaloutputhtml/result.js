@@ -1,9 +1,6 @@
 
 window.addEventListener('load', () => {
-
-
 debugger
-
 
 var storedArray = JSON.parse(sessionStorage.getItem("items"));
 var duplicateArray = storedArray;
@@ -11,8 +8,6 @@ var duplicateArray = storedArray;
 var countPass =duplicateArray==null?0:duplicateArray.filter(function(element){return (element.status == 'pass')||(element.status == 'Pass')||(element.status == 'PASS');}).length
 
 var countFail =duplicateArray==null?0:duplicateArray.filter(function(element){return (element.status == 'fail')||(element.status == 'Fail')||(element.status == 'FAIL');}).length
-
-
 
 document.getElementById("countPass").innerHTML=countPass;
 document.getElementById("countFail").innerHTML=countFail;
@@ -22,37 +17,57 @@ document.getElementById("steps").innerHTML=totalCount;
 
 display_current_date_homePage();
 
-var statusCount=new Array();
-statusCount.push({
-    ts:totalCount,
-    cp:countPass,
-    cf:countFail
-
-});
-
-
-
-var statusGroup =new Array();
- statusGroup.push({
-
-
-				childCount: statusCount.ts,
-
-				passChild:statusCount.cp,
-
-				failChild: statusCount.cf,
-
-			});
+//var statusCount=new Array();
+//statusCount.push({
+//    ts:totalCount,
+//    cp:countPass,
+//    cf:countFail
+//
+//});
+//
+//
+//var statusGroup =new Array();
+// statusGroup.push({
+//
+//
+//				childCount: statusCount.ts,
+//
+//				passChild:statusCount.cp,
+//
+//				failChild: statusCount.cf,
+//
+//			});
 
 //document.getElementById("statusGroup").innerHTML=statusGroup;
 
+if(storedArray==null){
+var display_date=current_Date();
+document.getElementById("start-time").innerHTML=display_date;
+document.getElementById("end-time").innerHTML=display_date;
+}
+else{
+for (let i = 0; i < storedArray.length; i++) {
+if(i==0){
+var current_date = storedArray[i].current_date;
+document.getElementById("start-time").innerHTML=current_date;
+document.getElementById("end-time").innerHTML=current_date;
 
+}
+else {
+var current_date = storedArray[i].current_date;
+document.getElementById("end-time").innerHTML=current_date;
+}
+}
+}
+
+//
 if(storedArray==null)return 0;
 else{
 for (let i = 0; i < storedArray.length; i++) {
 	var name = storedArray[i].name;
 	var status = storedArray[i].status;
 	var current_date = storedArray[i].current_date;
+//	document.getElementById("start-time").innerHTML=current_date;
 if((status == 'pass')||(status == 'Pass')||(status == 'PASS')){
     var html=`<ul class='collapsible node-list' data-collapsible='accordion'><li class='node level-1 leaf pass' status='pass' id='pass'><div class='collapsible-header'><div class='node-name'>${name}</div> <span class='node-time'>${current_date}</span>&middot; <span class='node-duration'>0h 2m 32s+291ms</span><span class='test-status right pass'> ${status}</span></div><div class='collapsible-body'></div> `;
     document.getElementById("tbl").insertAdjacentHTML("beforeend",html);
@@ -67,7 +82,6 @@ if((status == 'fail')||(status == 'Fail')||(status == 'FAIL'))
 }
 }
 }
-//refreshPage();
 })
 
 function current_Date(){
@@ -88,17 +102,22 @@ function display_current_date_homePage(){
 var display_date=current_Date();
 document.getElementById("blue darken_display_date").innerHTML=display_date;
 document.getElementById("iteration1_date").innerHTML=display_date;
-
-document.getElementById("start-time").innerHTML=display_date;
-document.getElementById("end-time").innerHTML=display_date;
+//
+//document.getElementById("start-time").innerHTML=display_date;
+//document.getElementById("end-time").innerHTML=display_date;
 
 document.getElementById("panel-lead-start-time").innerHTML=display_date;
 document.getElementById("panel-lead-end-time").innerHTML=display_date;
 
 }
 
-
-function refreshPage(){
-    window.location.reload();
-
-}
+//
+//function refreshPage(){
+//    window.location.reload();
+//
+//}
+//function refresh1(){
+// setInterval(function () {
+//        window.location.reload();
+//    }, 10000)
+//    }
