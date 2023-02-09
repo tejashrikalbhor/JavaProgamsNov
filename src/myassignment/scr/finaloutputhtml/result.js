@@ -44,6 +44,10 @@ if(storedArray==null){
 var display_date=current_Date();
 document.getElementById("start-time").innerHTML=display_date;
 document.getElementById("end-time").innerHTML=display_date;
+
+document.getElementById("panel-lead-start-time").innerHTML=display_date;
+document.getElementById("panel-lead-end-time").innerHTML=display_date;
+
 }
 else{
 for (let i = 0; i < storedArray.length; i++) {
@@ -52,10 +56,17 @@ var current_date = storedArray[i].current_date;
 document.getElementById("start-time").innerHTML=current_date;
 document.getElementById("end-time").innerHTML=current_date;
 
+document.getElementById("panel-lead-start-time").innerHTML=current_date;
+document.getElementById("panel-lead-end-time").innerHTML=current_date;
+
+
 }
 else {
 var current_date = storedArray[i].current_date;
 document.getElementById("end-time").innerHTML=current_date;
+
+document.getElementById("panel-lead-end-time").innerHTML=current_date;
+
 }
 }
 }
@@ -106,8 +117,8 @@ document.getElementById("iteration1_date").innerHTML=display_date;
 //document.getElementById("start-time").innerHTML=display_date;
 //document.getElementById("end-time").innerHTML=display_date;
 
-document.getElementById("panel-lead-start-time").innerHTML=display_date;
-document.getElementById("panel-lead-end-time").innerHTML=display_date;
+//document.getElementById("panel-lead-start-time").innerHTML=display_date;
+//document.getElementById("panel-lead-end-time").innerHTML=display_date;
 
 }
 
