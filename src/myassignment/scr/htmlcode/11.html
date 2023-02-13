@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="cambtn" onclick="camera();">Image</button>
+<button id="btn">Button</button>
+<script>
+function camera(){
+alert("hii..");
+}
+document.getElementById("btn").addEventListener("click", function(){
+document.getElementById("cambtn").onclick = function(){
+location.href = "file:///C:/projectWork/JavaProgamsNov/src/myassignment/scr/finaloutputhtml/homepage.html";
+});
+});
+
+</script>
+</body>
+</html>

@@ -52,7 +52,7 @@ else{
 sessionStorage.removeItem("items");
 <!--sessionStorage.clear();-->
 alert("Record Removed Successfully.");
-refreshPage();
+<!--refreshPage();-->
 }
 }
 
@@ -62,7 +62,12 @@ refreshPage();
 function refreshPage1(){
 <!--document.getElementById('f1').location.reload();-->
 <!--    parent.f2.location.reload();-->
-document.getElementById('f1').src += '';
+<!--document.getElementById('f1').src += '';-->
+
+<!--  var a=document.getElementById('f1');-->
+<!--     const b= a.contentWindow;-->
+<!--     console.log(b);-->
+
 }
 
 function current_Date(){
@@ -76,6 +81,12 @@ let curr_time_am_pm=curr_time.slice(10);
 var current_date_time =curr_date+" "+curr_time_am_pm;
 
 return current_date_time;
+}
+function refreshIframe() {
+<!--    var ifr = document.getElementsByName('f2').contentWindow.location.reload();-->
+    console.log("ifr "+ifr);
+    alert("called !");
+<!--    ifr.src = ifr.src;-->
 }
 
 
@@ -101,7 +112,8 @@ return current_date_time;
 <!--  <a http-equiv=”refresh” content=”0; url=file:///C:/projectWork/JavaProgamsNov/src/myassignment/scr/finaloutputhtml/homepage.html”>-->
 <!--    <input type="button" id="clear" onclick="clearData(),window.location.reload();" value="Remove All" /></a>-->
 
-    <input type="button" id="clear" onclick="clearData(),window.location.reload();" value="Remove All" />
+<!--    <input type="button" id="clear" onclick="clearData(),window.location.reload();" value="Remove All" />-->
+  <input type="button" id="clear" onclick="clearData(),refreshIframe();" value="Remove All" />
   <button type="reset" >Reset</button>
 
 </form>

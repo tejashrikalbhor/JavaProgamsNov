@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<button type="button" name="open" onclick="open()">Open</button>
+<button type="button" name="refresh" onclick="refresh()">Refresh</button>
+<script>
+    let secondWindow;
+
+    function open() {
+    alert("you have click on open..");
+      secondWindow = window.open('abc.html');
+    }
+
+    function refresh() {
+      if (secondWindow) {
+      alert("you have click on refresh..");
+        secondWindow.location.reload(true); // Use true to always force reload from the server
+      }
+    }
+</script>
+<body>
+
+</body>
+</html>
