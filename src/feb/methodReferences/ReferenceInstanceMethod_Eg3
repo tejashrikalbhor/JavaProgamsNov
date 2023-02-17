@@ -1,0 +1,16 @@
+package feb.methodReferences;
+interface  say1{
+    void say();
+}
+public class ReferenceInstanceMethod_Eg3 {
+    public void details(){
+        System.out.println("you are in the details method.");
+    }
+
+    public static void main(String[] args) {
+        ReferenceInstanceMethod_Eg3 r =new ReferenceInstanceMethod_Eg3();
+        say1 s =r::details;
+        s.say();
+
+    }
+}

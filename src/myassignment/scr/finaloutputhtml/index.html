@@ -31,7 +31,7 @@ let x = new Array();
 var result= new Array();
 result=x;
 window.sessionStorage.setItem("items", JSON.stringify(result));
-alert("Record added successfully.");
+alert("Record added Successfully.");
 document.getElementById("myForm").reset();
         }
         else{
@@ -83,13 +83,12 @@ var current_date_time =curr_date+" "+curr_time_am_pm;
 return current_date_time;
 }
 function refreshIframe() {
-<!--    var ifr = document.getElementsByName('f2').contentWindow.location.reload();-->
-    console.log("ifr "+ifr);
-    alert("called !");
+var location="file:///C:/projectWork/JavaProgamsNov/src/myassignment/scr/finaloutputhtml/homepage.html";
+    var ifr = document.getElementsByName('f2').contentWindow.location.reload();
+<!--    console.log("ifr "+ifr);-->
+<!--    alert("called !");-->
 <!--    ifr.src = ifr.src;-->
 }
-
-
     </script>
 </head>
 <body>
